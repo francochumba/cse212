@@ -22,7 +22,7 @@ public static class Arrays
             var value = number * count++;
             array[i] = value;
         }
-        // To solve this problem, i had to draw a sketch in a piece of paper of each process. i was struggling at first because
+        // To solve this problem, I had to draw a sketch in a piece of paper of each process. I was struggling at first because
         // I wanted to replace the data but I learned and recalled in the process that an array behaves differently than a list
         // I preferred to use a for loop instead of a foreach, i found it cleaner and easier to understand.
 
@@ -49,7 +49,7 @@ public static class Arrays
         data.InsertRange(0, extract);
 
 
-        // At first i also made a Sketch to get an idea of what to do, but i was confused if I had to provide the input as well as the list
+        // At first I also made a Sketch to get an idea of what to do, but i was confused if I had to provide the input as well as the list
         // The result was a little waste of time but I strengthened my understanding of Lists by adding, removing and inserting data.
     }
 }
