@@ -41,7 +41,7 @@ public static class Arrays
         data.InsertRange(0, extract);
 
 
-        // At first i also made a sketch to get an idea of what to do, but i was confused if I had to provide the input as well as the list
+        // At first i also made a Sketch to get an idea of what to do, but i was confused if I had to provide the input as well as the list
         // The result was a little waste of time but I strengthened my understanding of Lists by adding, removing and inserting data.
     }
 }
