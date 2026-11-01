@@ -1,14 +1,17 @@
 public static class Arrays
 {
     /// <summary>
-    /// the function first creates an array to hold the data, sets a counter starting at 1 for it's augmentation and
-    /// then sets a for loop to iterate the length of the multiplication. for each iteration, the value is multiplied by the counter.
-    /// finally I added a post-increment operator to simplify the counting.
-    /// because it is an array, i assigned its index values instead of adding or inserting them like a list.
+    /// The function first creates an array to hold the data and initializes a counter starting at 1.
+    /// Then, a for loop iterates through the array based on its length.
+    /// During each iteration, the given number is multiplied by the counter.
+    /// The post-increment operator increases the counter after its current value is used.
+    /// Since this is an array, I assign each result to its corresponding index instead of adding
+    /// or inserting elements as I would with a list.
+    /// Finally, the function returns the completed array.
     /// </summary>
-    /// <param name="number"> calls the number to be multiplied</param>
-    /// <param name="length"> how many multiples will have</param>
-    /// <returns> returns the multiples of the number provided according to its length</returns>
+    /// <param name="number">The number to be multiplied.</param>
+    /// <param name="length">The number of multiples to generate.</param>
+    /// <returns>An array containing the multiples of the provided number.</returns>
     public static double[] MultiplesOf(double number, int length)
     {
         double[] array = new double[length];
@@ -27,13 +30,17 @@ public static class Arrays
     }
 
     /// <summary>
-    /// this function calls the sequence of numbers provided by the tests, and a specific number to rotate the list.
-    /// it first calculates the range of the numbers to be extracted by counting them.
-    /// then it creates a list to hold the extracted numbers and get them with the method .getRange.
-    /// after this, I delete the range of values extracted in the list and finally insert them at the beginning of the list.
+    /// This function receives a list of integers and an amount indicating how many elements
+    /// should be rotated to the right.
+    /// First, the Count property determines the total number of elements in the list.
+    /// Then, the starting index is calculated by subtracting the amount from the list's count.
+    /// The GetRange() method creates a new list containing the selected elements.
+    /// After that, the RemoveRange() method removes those elements from the original list.
+    /// Finally, the InsertRange() method inserts the extracted elements at index 0,
+    /// modifying the original list without returning a new one.
     /// </summary>
-    /// <param name="data"> the list of numbers provided by the tester</param>
-    /// <param name="amount"> the amount of numbers rotated at the beginning of the list</param>    
+    /// <param name="data">The original list of integers to rotate.</param>
+    /// <param name="amount">The number of positions to rotate the list to the right.</param>
     public static void RotateListRight(List<int> data, int amount)
     {
         int range = data.Count;
