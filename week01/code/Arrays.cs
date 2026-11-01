@@ -1,10 +1,10 @@
 public static class Arrays
 {
     /// <summary>
-    /// the function creates an array to hold the data, sets the counter that starts at 1 for it's augmentation
-    /// and a for loop to iterate the length of the multiplication
-    /// I added an post-increment operator to simplify the counting
-    /// because it is an array, I assigned the value of each index instead of adding or inserting values like a list.
+    /// the function first creates an array to hold the data, sets a counter starting at 1 for it's augmentation and
+    /// then sets a for loop to iterate the length of the multiplication. for each iteration, the value is multiplied by the counter.
+    /// finally I added a post-increment operator to simplify the counting.
+    /// because it is an array, i assigned its index values instead of adding or inserting them like a list.
     /// </summary>
     /// <param name="number"> calls the number to be multiplied</param>
     /// <param name="length"> how many multiples will have</param>
@@ -28,8 +28,9 @@ public static class Arrays
 
     /// <summary>
     /// this function calls the sequence of numbers provided by the tests, and a specific number to rotate the list.
-    /// it calculates the range of the numbers to be "extracted", removed the selected elements of the list and insert them
-    /// at the beginning of the list.
+    /// it first calculates the range of the numbers to be extracted by counting them.
+    /// then it creates a list to hold the extracted numbers and get them with the method .getRange.
+    /// after this, I delete the range of values extracted in the list and finally insert them at the beginning of the list.
     /// </summary>
     /// <param name="data"> the list of numbers provided by the tester</param>
     /// <param name="amount"> the amount of numbers rotated at the beginning of the list</param>    
