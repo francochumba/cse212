@@ -5,8 +5,15 @@
 public class CustomerService {
     public static void Run() {
         // Example code to see what's in the customer service queue:
-        // var cs = new CustomerService(10);
-        // Console.WriteLine(cs);
+        
+        var cs = new CustomerService(10);
+        var service = new CustomerService(2);
+        
+        service.AddNewCustomer();
+
+        service.ServeCustomer();
+
+        Console.WriteLine(cs);
 
         // Test Cases
 
@@ -67,7 +74,9 @@ public class CustomerService {
     /// </summary>
     private void AddNewCustomer() {
         // Verify there is room in the service queue
-        if (_queue.Count > _maxSize) {
+        if (_queue.Count >= _maxSize) {
+
+            
             Console.WriteLine("Maximum Number of Customers in Queue.");
             return;
         }
@@ -88,10 +97,23 @@ public class CustomerService {
     /// Dequeue the next customer and display the information.
     /// </summary>
     private void ServeCustomer() {
-        _queue.RemoveAt(0);
-        var customer = _queue[0];
-        Console.WriteLine(customer);
+
+    if (_queue.Count == 0) {
+
+        Console.WriteLine("No Customers in Queue.");
+
+        return;
+
     }
+ 
+    var customer = _queue[0];
+
+    _queue.RemoveAt(0);
+
+    Console.WriteLine(customer);
+
+}
+ 
 
     /// <summary>
     /// Support the WriteLine function to provide a string representation of the
